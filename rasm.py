@@ -9,6 +9,8 @@ from time import gmtime, strftime
 end = -1
 reg32len, reg64len, = 8, 16
 reg32addr, reg64addr = 2**8, 2**16
+# "32"-bit registries have a total storage space of 2 kB
+# "64"-bit registries have a total storage space of 1 MB
 reg32 = [[''] * reg32len] * reg32addr # Creates 256 8-byte memory blocks, or 2048 characters (Not addresses!)
 reg64 = [[''] * reg64len] * reg64addr # Creates 65536 16-byte memory blocks, or 1048576 characters (Not addresses!)
 tagDict = {}
